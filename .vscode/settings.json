@@ -2,6 +2,7 @@
     "files.associations": {
         "*.dbclient-js": "javascript",
         "qapplication": "cpp",
-        "qmainwindow": "cpp"
+        "qmainwindow": "cpp",
+        "qnetworkaccessmanager": "cpp"
     }
 }

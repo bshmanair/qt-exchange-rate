@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
     prepareCountryList();
     populateCountryList();
     api_key = "02a26161094176930b30168e";
-    //
 }
 
 MainWindow::~MainWindow()
