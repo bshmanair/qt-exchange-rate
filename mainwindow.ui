@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>447</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -17,20 +17,20 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>12</y>
       <width>781</width>
-      <height>571</height>
+      <height>411</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QLabel" name="label_SourceCountry">
+        <widget class="QLabel" name="sourceCountryLabel">
          <property name="minimumSize">
           <size>
            <width>200</width>
@@ -54,7 +54,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBoxSourceCountry">
+        <widget class="QComboBox" name="sourceCountryComboBox">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -95,7 +95,7 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
-        <widget class="QLabel" name="label_DestinationCountry">
+        <widget class="QLabel" name="destinationCountryLabel">
          <property name="minimumSize">
           <size>
            <width>200</width>
@@ -119,7 +119,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="comboBoxDestinationCountry">
+        <widget class="QComboBox" name="destinationCountryComboBox">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -158,28 +158,74 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="btnGetRate">
-       <property name="minimumSize">
-        <size>
-         <width>100</width>
-         <height>40</height>
-        </size>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="topMargin">
+        <number>0</number>
        </property>
-       <property name="maximumSize">
-        <size>
-         <width>100</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>Get Rate</string>
-       </property>
-      </widget>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="getRateButton">
+         <property name="minimumSize">
+          <size>
+           <width>100</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Get Rate</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QLabel" name="lblExchangeRate">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="exchangeRateLabel">
          <property name="font">
           <font>
            <pointsize>20</pointsize>
@@ -187,6 +233,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -197,7 +246,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>398</width>
+           <width>40</width>
            <height>20</height>
           </size>
          </property>
@@ -219,12 +268,11 @@
       </spacer>
      </item>
      <item>
-      <widget class="QTextEdit" name="txtJsonResponse"/>
+      <widget class="QTextEdit" name="jsonResponseTextEdit"/>
      </item>
     </layout>
    </widget>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

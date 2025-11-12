@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 #include <QtNetwork/QNetworkAccessManager>
@@ -17,22 +16,21 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
 private slots:
     void onDataReceived();
-    void on_btnGetRate_clicked();
+    void onGetRateClicked();
 
 private:
-    Ui::MainWindow *ui;
-    QNetworkAccessManager *manager;
-    QNetworkReply *reply;
-    QStringList countryList;
-
-    void prepareCountryList();
+    void prepareCountryList(const QString& filePath);
     void populateCountryList();
-    void getExchangeRateData(QString);
+    void getExchangeRateData(const QString& sourceCountry);
 
-    QString api_key;
+    Ui::MainWindow *ui;
+    QNetworkAccessManager *m_manager;
+    QNetworkReply *m_reply;
+    QStringList m_countryList;
+    QString m_apiKey;
 };
-#endif // MAINWINDOW_H
